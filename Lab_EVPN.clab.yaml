@@ -1,0 +1,32 @@
+name: Lab_EVPN
+topology:
+  kinds:
+    nokia_srlinux:
+      image: ghcr.io/nokia/srlinux:25.7
+  nodes:
+    spine1:
+      kind: nokia_srlinux
+      type: ixr-d3
+    spine2:
+      kind: nokia_srlinux
+      type: ixr-d3
+    leaf1:
+      kind: nokia_srlinux
+      type: ixr-d3
+    leaf2:
+      kind: nokia_srlinux
+      type: ixr-d3
+    leaf3:
+      kind: nokia_srlinux
+      type: ixr-d3
+
+  links:
+              #Spine1 conecctions
+    - endpoints: ["spine1:e1-1", "leaf1:e1-1"]
+    - endpoints: ["spine1:e1-2", "leaf2:e1-1"]
+    - endpoints: ["spine1:e1-3", "leaf3:e1-1"]
+	
+	              #Spine2 conecctions
+    - endpoints: ["spine2:e1-1", "leaf1:e1-2"]
+    - endpoints: ["spine2:e1-2", "leaf2:e1-2"]
+    - endpoints: ["spine2:e1-3", "leaf3:e1-1"]
