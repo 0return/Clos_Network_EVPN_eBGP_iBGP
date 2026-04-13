@@ -29,4 +29,4 @@ topology:
 	              #Spine2 conecctions
     - endpoints: ["spine2:e1-1", "leaf1:e1-2"]
     - endpoints: ["spine2:e1-2", "leaf2:e1-2"]
-    - endpoints: ["spine2:e1-3", "leaf3:e1-1"]
+    - endpoints: ["spine2:e1-3", "leaf3:e1-2"]
